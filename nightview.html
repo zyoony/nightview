@@ -43,8 +43,9 @@ var contentString = [
 var infowindow = new naver.maps.InfoWindow({
     content: contentString
 });
-    
-    
+
+
+//클릭해서 열었다 닫았다하기
 naver.maps.Event.addListener(marker, "click", function(e) {
     if (infowindow.getMap()) {
         infowindow.close();
@@ -54,9 +55,6 @@ naver.maps.Event.addListener(marker, "click", function(e) {
 });
 
 infowindow.open(map, marker);
-
-
-var map = new naver.maps.Map('map', mapOptions);
 
 //광화문
 
@@ -197,6 +195,7 @@ var infowindow = new naver.maps.InfoWindow({
     content: contentString
 });
 
+//클릭해서 열었다 닫았다하기
 naver.maps.Event.addListener(marker, "click", function(e) {
     if (infowindow.getMap()) {
         infowindow.close();
@@ -207,8 +206,6 @@ naver.maps.Event.addListener(marker, "click", function(e) {
 
 infowindow.open(map, marker);
 
-
-var map = new naver.maps.Map('map', mapOptions);
 </script>
 </body>
 </html>
