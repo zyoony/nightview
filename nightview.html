@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>서울의 야경</title>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=ijvvsnrx68"></script>
+</head>
+<body>
+<div id="map" style="width:100%;height: 1040px;"></div>
+
+<script>
+
+var HOME_PATH = window.HOME_PATH || '.';
+var position = new naver.maps.LatLng(37.5774224, 126.9769689);
+
+var map = new naver.maps.Map('map', {
+    center: position,
+    zoom: 15
+});
+
+
+
+//경복궁
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5774224, 126.9769689),
+    map: map
+});
+
+var contentString = [
+        '<div class="iw_inner">',
+        '   <h3>경복궁</h3>',
+        '   <p>서울특별시 종로구 세종로 1-91 | 서울 종로구 사직로 161 경복궁 <br />',
+        '       02-3700-3900  | 고궁,궁 | <br />',
+        '       매일 09:00 ~ 18:30 (입장마감 17:30), 화요일 휴무 <br />',
+        '       2022년 하반기 경복궁 야간관람: 19:00 21:30 (예매필요)  <br />',
+        '       <a href="www.royalpalace.go.kr" target="_blank">www.royalpalace.go.kr/</a>',
+        '   </p>',
+        '</div>'
+    ].join('');
+
+var infowindow = new naver.maps.InfoWindow({
+    content: contentString
+});
+
+//광화문
+
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5765941, 126.9749764),
+    map: map
+});
+
+//국립현대미술관
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5788415, 126.9806176),
+    map: map
+});
+
+//N서울타워
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5511249, 126.9878647),
+    map: map
+});
+
+//국립중앙박물관
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5237192, 126.9799539),
+    map: map
+});
+
+//낙산공원
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5805942, 127.0065316),
+    map: map
+});
+
+//덕수궁
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5658716, 126.9749535),
+    map: map
+});
+
+//돈의문박물관마을
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5688341, 126.9685285),
+    map: map
+});
+
+//롯데백화점 본점
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5646834, 126.9813312),
+    map: map
+});
+
+
+//백범광장공원 성곽길
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5542542, 126.9829332),
+    map: map
+});
+
+//북악팔각정
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.6018444, 126.9805642),
+    map: map
+});
+
+//서울로7017
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5584424, 126.9702677),
+    map: map
+});
+
+//문화역서울284
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5559871, 126.9718294),
+    map: map
+});
+
+//서울시 신청사
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5665751, 126.9781473),
+    map: map
+});
+
+//숭례문
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5599191, 126.9753407),
+    map: map
+});
+
+//서울특별시의회
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5642476, 126.9747041),
+    map: map
+});
+
+//창덕궁
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5802866, 126.9925648),
+    map: map
+});
+
+//창인숭인채석장 전망대
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5785444, 127.0113704),
+    map: map
+});
+
+//청계천 모전교
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5681503, 126.9789974),
+    map: map
+});
+
+
+//흥인지문
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.571169, 127.009702),
+    map: map
+});
+
+
+
+//시청 정보
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5666805, 126.9784147),
+    map: map
+});
+
+var contentString = [
+        '<div class="iw_inner">',
+        '   <h3>서울특별시청</h3>',
+        '   <p>서울특별시 중구 태평로1가 31 | 서울특별시 중구 세종대로 110 서울특별시청<br />',
+        '       02-120 | 공공,사회기관 &gt; 특별,광역시청<br />',
+        '       <a href="http://www.seoul.go.kr" target="_blank">www.seoul.go.kr/</a>',
+        '   </p>',
+        '</div>'
+    ].join('');
+
+var infowindow = new naver.maps.InfoWindow({
+    content: contentString
+});
+
+naver.maps.Event.addListener(marker, "click", function(e) {
+    if (infowindow.getMap()) {
+        infowindow.close();
+    } else {
+        infowindow.open(map, marker);
+    }
+});
+
+infowindow.open(map, marker);
+
+
+var map = new naver.maps.Map('map', mapOptions);
+</script>
+</body>
+</html>
