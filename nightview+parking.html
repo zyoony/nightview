@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>서울의 야경</title>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=1urzot8jsn"></script>
+</head>
+<body>
+<div id="map" style="width:100%;height:400px;"></div>
+
+<script>
+
+var HOME_PATH = window.HOME_PATH || '.';
+var position = new naver.maps.LatLng(37.5774224, 126.9769689);
+
+var map = new naver.maps.Map('map', {
+    center: position,
+    zoom: 15
+});
+
+
+
+//경복궁
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5774224, 126.9769689),
+    map: map
+});
+
+var contentString = [
+        '<div class="iw_inner">',
+        '   <h3>경복궁</h3>',
+        '   <p>서울 종로구 사직로 161 경복궁',
+        '   </p>',
+        '</div>'
+    ].join('');
+
+var infowindow = new naver.maps.InfoWindow({
+    content: contentString
+});
+
+
+//클릭해서 열었다 닫았다하기
+naver.maps.Event.addListener(marker, "click", function(e) {
+    if (infowindow.getMap()) {
+        infowindow.close();
+    } else {
+        infowindow.open(map, marker);
+    }
+});
+
+infowindow.open(map, marker);
+
+
+//광화문
+
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5765941, 126.9749764),
+    map: map,
+
+  
+});
+
+
+
+
+//국립현대미술관
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5788415, 126.9806176),
+    map: map
+});
+
+//N서울타워
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5511249, 126.9878647),
+    map: map
+});
+
+//국립중앙박물관
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5237192, 126.9799539),
+    map: map
+});
+
+//낙산공원
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5805942, 127.0065316),
+    map: map
+});
+
+//덕수궁
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5658716, 126.9749535),
+    map: map
+});
+
+//돈의문박물관마을
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5688341, 126.9685285),
+    map: map
+});
+
+//롯데백화점 본점
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5646834, 126.9813312),
+    map: map
+});
+
+
+//백범광장공원 성곽길
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5542542, 126.9829332),
+    map: map
+});
+
+//북악팔각정
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.6018444, 126.9805642),
+    map: map
+});
+
+//서울로7017
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5584424, 126.9702677),
+    map: map
+});
+
+//문화역서울284
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5559871, 126.9718294),
+    map: map
+});
+
+//서울시 신청사
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5665751, 126.9781473),
+    map: map
+});
+
+//숭례문
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5599191, 126.9753407),
+    map: map
+});
+
+//서울특별시의회
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5642476, 126.9747041),
+    map: map
+});
+
+//창덕궁
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5802866, 126.9925648),
+    map: map
+});
+
+//창인숭인채석장 전망대
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5785444, 127.0113704),
+    map: map
+});
+
+//청계천 모전교
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5681503, 126.9789974),
+    map: map
+});
+
+
+// //신문로 주차장
+// var marker = new naver.maps.Marker({
+//     position: new naver.maps.LatLng(37.5709645, 126.9709258),
+//     map: map
+// });
+
+// var contentString = [
+//         '<div class="iw_inner">',
+//         '   <h3>[공영]신문로 주차장</h3>',
+//         '   <p>서울특별시 종로구 새문안로 79<br />',
+//         '    주차구획수: 17  <br/>',
+//         '    운영시간: 평일, 토요일, 공휴일 0:00 - 19:00<br/>',
+//         '    요일제: 미시행<br/> ',
+//         '    기본 주차 시간: 5분, 기본 주차 요금: 400원',
+//         '   </p>',
+//         '</div>'
+//     ].join('');
+
+// var infowindow = new naver.maps.InfoWindow({
+//     content: contentString
+// });
+
+
+// //클릭해서 열었다 닫았다하기
+// naver.maps.Event.addListener(marker, "click", function(e) {
+//     if (infowindow.getMap()) {
+//         infowindow.close();
+//     } else {
+//         infowindow.open(map, marker);
+//     }
+// });
+
+// infowindow.open(map, marker);
+
+// //시민열린마당뒤 주차장
+// var marker = new naver.maps.Marker({
+//     position: new naver.maps.LatLng(37.57534036, 126.9788833),
+//     map: map
+// });
+
+// var contentString = [
+//         '<div class="iw_inner">',
+//         '   <h3>[공영]시민열린마당뒤 주차장</h3>',
+//         '   <p>서울특별시 종로구 종로1길 55<br />',
+//         '   주차 구획수: 11<br />',
+//         '   운영시간: 평일 9:00 - 19:00 , 토요일: 9:00 - 15:00<br /> ',
+//         '    기본 주차 시간: 5분, 기본 주차 요금: 500원<br />',
+//         '    요일제: 미시행<br/> ',
+//         '   </p>',
+//         '</div>'
+//     ].join('');
+
+// var infowindow = new naver.maps.InfoWindow({
+//     content: contentString
+// });
+
+
+// infowindow.open(map, marker);
+
+
+//국원주차장
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5768222, 126.9867811),
+    map: map
+});
+
+var contentString = [
+        '<div class="iw_inner">',
+        '   <h3>[민영]국원 주차장</h3>',
+        '   <p>서울특별시 종로구 율곡로 64<br />',
+        '    주차구획수: 17  <br/>',
+        '    운영시간: 평일, 토요일, 공휴일 24시간<br/> ',
+        '    요일제: 미시행<br/> ',
+        '    기본 주차 시간: 30분, 기본 주차 요금: 2000원',
+        '   </p>',
+        '</div>'
+    ].join('');
+
+var infowindow = new naver.maps.InfoWindow({
+    content: contentString
+});
+
+
+//클릭해서 열었다 닫았다하기
+naver.maps.Event.addListener(marker, "click", function(e) {
+    if (infowindow.getMap()) {
+        infowindow.close();
+    } else {
+        infowindow.open(map, marker);
+    }
+});
+
+infowindow.open(map, marker);
+
+
+var map = new naver.maps.Map('map', mapOptions);
+</script>
+</body>
+</html>
