@@ -22,40 +22,6 @@ var map = new naver.maps.Map('map', {
 
 
 
-//경복궁
-var marker = new naver.maps.Marker({
-    position: new naver.maps.LatLng(37.5774224, 126.9769689),
-    map: map
-});
-
-var contentString = [
-        '<div class="iw_inner">',
-        '   <h3>경복궁</h3>',
-        '   <p>서울특별시 종로구 세종로 1-91 | 서울 종로구 사직로 161 경복궁 <br />',
-        '       02-3700-3900  | 고궁,궁 | <br />',
-        '       매일 09:00 ~ 18:30 (입장마감 17:30), 화요일 휴무 <br />',
-        '       2022년 하반기 경복궁 야간관람: 19:00 21:30 (예매필요)  <br />',
-        '       <a href="www.royalpalace.go.kr" target="_blank">www.royalpalace.go.kr/</a>',
-        '   </p>',
-        '</div>'
-    ].join('');
-
-var infowindow = new naver.maps.InfoWindow({
-    content: contentString
-});
-
-
-//클릭해서 열었다 닫았다하기
-naver.maps.Event.addListener(marker, "click", function(e) {
-    if (infowindow.getMap()) {
-        infowindow.close();
-    } else {
-        infowindow.open(map, marker);
-    }
-});
-
-infowindow.open(map, marker);
-
 //광화문
 
 var marker = new naver.maps.Marker({
@@ -174,6 +140,39 @@ var marker = new naver.maps.Marker({
 });
 
 
+//경복궁
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.5774224, 126.9769689),
+    map: map
+});
+
+var contentString = [
+        '<div class="iw_inner">',
+        '   <h3>경복궁</h3>',
+        '   <p>서울특별시 종로구 세종로 1-91 | 서울 종로구 사직로 161 경복궁 <br />',
+        '       02-3700-3900  | 고궁,궁 | <br />',
+        '       매일 09:00 ~ 18:30 (입장마감 17:30), 화요일 휴무 <br />',
+        '       2022년 하반기 경복궁 야간관람: 19:00 21:30 (예매필요)  <br />',
+        '       <a href="www.royalpalace.go.kr" target="_blank">www.royalpalace.go.kr/</a>',
+        '   </p>',
+        '</div>'
+    ].join('');
+
+var infowindow = new naver.maps.InfoWindow({
+    content: contentString
+});
+
+
+//클릭해서 열었다 닫았다하기
+naver.maps.Event.addListener(marker, "click", function(e) {
+    if (infowindow.getMap()) {
+        infowindow.close();
+    } else {
+        infowindow.open(map, marker);
+    }
+});
+
+infowindow.open(map, marker);
 
 
 </script>
